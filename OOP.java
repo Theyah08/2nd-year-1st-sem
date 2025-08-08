@@ -11,7 +11,7 @@ class OOP {
 
 
         // Programming Basic
-        //basicasy();
+        //basicEasy();
         //basicMedium();
         //basicHard();
 
