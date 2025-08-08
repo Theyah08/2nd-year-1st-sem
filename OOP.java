@@ -168,6 +168,265 @@ class OOP {
             input.close();
         }
 
+        public static void selectionEasy() {
+            Scanner scanner = new Scanner(System.in);
+    
+            while (true) {
+    
+                System.out.print("Enter number (or type 'exit'): ");
+                String input = scanner.next();
+    
+                if (input.equalsIgnoreCase("exit")){
+                    System.out.println("Program Exiting Thank You");
+                    break;
+                }
+    
+                int num;
+                try { 
+                    num = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid Please Input Valid Number or 'exit'");
+                    System.out.println();
+                    continue;
+                }
+    
+                if (num > 0){
+                    System.out.println("Your number is Positive" );
+                } else if (num == 0){
+                    System.out.println("Your number is Zero");
+                } else{
+                    System.out.println("Your number is Negative");
+                } 
+    
+                System.out.println();
+    
+            }
+    
+            scanner.close();
+    
+        }
+    
+
+         public static void selectionMedium() {
+            Scanner scanner = new Scanner(System.in);
+    
+        while (true){
+    
+            System.out.print("Enter fIrst numbers (or type 'exit'): ");
+            String input = scanner.next();
+    
+            if (input.equalsIgnoreCase("exit")){
+                System.out.println("Program Exiting Thank You");
+                break;
+            }
+    
+            int num1;
+            try { 
+                num1 = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid Please Input Valid Number or 'exit'");
+                continue;
+            }
+    
+            System.out.print("Enter second number: ");
+            int num2;
+            try { 
+                num2 = scanner.nextInt();
+            } catch (Exception e) {
+                System.out.println("Invalid Please Input Valid Number");
+                scanner.next();
+                continue;
+            }
+    
+            System.out.print("Enter third number: ");
+            int num3;
+            try { 
+                num3 = scanner.nextInt();
+            } catch (Exception e) {
+                System.out.println("Invalid Please Input Valid Number");
+                scanner.next();
+                continue;
+            }
+        
+            System.out.println();
+    
+    
+            if ( num1 > num2 && num1 > num3 ){
+                System.out.println(num1 + " is largest among " + num2 + " and " + num3);
+            } else if (num2 > num1 && num2 > num3 ){
+                 System.out.println(num2 + " is largest among " + num1 + " and " + num3);
+            } else {
+                 System.out.println(num3 + " is largest among " + num1 + " and " + num2);
+            }
+            System.out.println();
+    
+    
+            if ( num1 < num2 && num1 < num3 ){
+                System.out.println(num1 + " is smallest among " + num2 + " and " + num3);
+            } else if (num2 < num1 && num2 < num3 ){
+                 System.out.println(num2 + " is smallest among " + num1 + " and " + num3);
+            } else {
+                 System.out.println(num3 + " is smallest among " + num1 + " and " + num2);
+            }
+    
+            System.out.println();
+        }
+    
+            scanner.close();
+    
+        }
+    
+
+        public static void selectionHard() {
+            Scanner scanner = new Scanner(System.in);
+    
+            while (true) { 
+                System.out.println("Enter grade score (or enter 'exit'): ");
+                String input = scanner.next();
+    
+                //System exit when input "exit"
+                if (input.equalsIgnoreCase("exit")) {
+                    System.out.println("Exiting program...");
+                    break;
+                }
+    
+                int score;
+                try {
+                    score = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid number. Try again.");
+                    continue;
+                }
+    
+                if (score >= 90 && score <= 100) {
+                    System.out.println("Your grade is A " );
+                } else if (score >= 80 && score <= 89) {
+                    System.out.println("Your grade is B");
+                } else if (score >= 70 && score <= 79) {
+                    System.out.println("Your grade is C");
+                } else if (score >= 60 && score <= 69) {
+                    System.out.println("Your grade is D");
+                } else if (score >= 0 && score <= 59) {
+                    System.out.println("Your grade is F");
+                } else {
+                    System.out.println("Score out of range. Must be between 0 and 100.");
+                }
+                
+                System.out.println(" ");
+                
+            }
+            scanner.close();
+    
+        }
+    
+
+        public static void repetitionEasy() {
+    
+            System.out.println("Printing first 10 natural numbers...");
+    
+                for (int i = 1; i <= 10; i++) {
+                System.out.println(i);
+            }
+    
+        }
+    
+
+        public static void repetitionMedium() {
+            Scanner scanner = new Scanner(System.in);
+    
+            while (true){
+    
+                System.out.println("Enter Number (or 'exit'): ");
+                String input = scanner.next(); // The number to calculate factorial
+    
+                if (input.equalsIgnoreCase("exit")) {
+                    System.out.println("Exiting program...");
+                    break;
+                }
+    
+                int number;
+                try {
+                    number = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid number. Try again.");
+                    continue;
+                }
+    
+                long factorial = 1; // Use long to handle larger factorials
+                System.out.println(""); // for spacing
+    
+                for (int i = 1; i <= number; i++) {
+                    factorial *= i; // factorial = factorial * i;
+                }
+    
+                System.out.println("Factorial of " + number + " is: " + factorial);
+                System.out.println(" ");
+    
+            }
+            scanner.close();
+    
+        }
+
+
+        public static void repetitionHard() {
+            Scanner scanner = new Scanner(System.in);
+    
+            while (true){
+                System.out.println("Enter Number (or 'exit'): ");
+                String input = scanner.next(); // The number to calculate factorial
+    
+                if (input.equalsIgnoreCase("exit")) {
+                    System.out.println("Exiting program...");
+                    break;
+                }
+    
+                int num;
+                try {
+                    num = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid number. Try again.");
+                    continue;
+                }
+    
+                boolean isPrime = true;
+    
+                if (num <= 1) {
+                    isPrime = false;
+                } else {
+                    for (int i = 2; i <= num / 2; i++) {
+                        if (num % i == 0 ) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                }
+    
+                System.out.println(" ");
+    
+                //for output display
+                if (isPrime) {
+                    System.out.println(num + " is a prime number");
+                } else {
+                    System.out.println(num + " is Not a prime number");
+                    System.out.print("Divisor: ");
+                    for (int i = 1; i <= num; i++) {
+                        if (num % i == 0) { 
+                        System.out.print( i + " ");
+    
+                        System.out.println(" "); // for spacing
+                        }
+                    }
+                }
+    
+                System.out.println(" ");
+    
+            }
+            scanner.close();
+    
+        }
+
+    
+
 
 
   
