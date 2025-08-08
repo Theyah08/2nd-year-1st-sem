@@ -59,7 +59,7 @@ class OOP {
             System.out.println("difference is: " + difference);
             System.out.println("product is: " + product);
             System.out.println("quotient is: " + quotient);
-
+    
     }
 
       public static void basicMedium() {
@@ -109,64 +109,64 @@ class OOP {
             scanner.close();
         }
 
-          public static void basicHard() {
-                Scanner input = new Scanner(System.in);
-        
-                double num1, num2, result;
-                char operator;
-                String continueCalc;
-        
-                do {
-                    // Get the first number from the user
-                    System.out.print("Enter first number: ");
-                    num1 = input.nextDouble();
-        
-                    // Get the operator from the user
-                    System.out.print("Enter an operator (+, -, *, /): ");
-                    operator = input.next().charAt(0);
-        
-                    // Get the second number from the user
-                    System.out.print("Enter second number: ");
-                    num2 = input.nextDouble();
-        
-                    switch (operator) {
-                        case '+':
-                            result = num1 + num2;
-                            System.out.println(num1 + " + " + num2 + " = " + result);
-                            break;
-        
-                        case '-':
-                            result = num1 - num2;
-                            System.out.println(num1 + " - " + num2 + " = " + result);
-                            break;
-        
-                        case '*':
-                            result = num1 * num2;
-                            System.out.println(num1 + " * " + num2 + " = " + result);
-                            break;
-        
-                        case '/':
-                            if (num2 == 0) {
-                                System.out.println("Error: Division by zero is not allowed.");
-                            } else {
-                                result = num1 / num2;
-                                System.out.println(num1 + " / " + num2 + " = " + result);
-                            }
-                            break;
-        
-                        default:
-                            System.out.println("Error: Invalid operator.");
-                            break;
-                    }
-                    // Ask the user if they want to continue
-                    System.out.print("Do you want to perform another calculation? (yes/no): ");
-                    continueCalc = input.next();
-        
-                } while (continueCalc.equalsIgnoreCase("yes"));
-        
-                System.out.println("Calculator exited.");
-                input.close();
-            }
+      public static void basicHard() {
+            Scanner input = new Scanner(System.in);
+    
+            double num1, num2, result;
+            char operator;
+            String continueCalc;
+    
+            do {
+                // Get the first number from the user
+                System.out.print("Enter first number: ");
+                num1 = input.nextDouble();
+    
+                // Get the operator from the user
+                System.out.print("Enter an operator (+, -, *, /): ");
+                operator = input.next().charAt(0);
+    
+                // Get the second number from the user
+                System.out.print("Enter second number: ");
+                num2 = input.nextDouble();
+    
+                switch (operator) {
+                    case '+':
+                        result = num1 + num2;
+                        System.out.println(num1 + " + " + num2 + " = " + result);
+                        break;
+    
+                    case '-':
+                        result = num1 - num2;
+                        System.out.println(num1 + " - " + num2 + " = " + result);
+                        break;
+    
+                    case '*':
+                        result = num1 * num2;
+                        System.out.println(num1 + " * " + num2 + " = " + result);
+                        break;
+    
+                    case '/':
+                        if (num2 == 0) {
+                            System.out.println("Error: Division by zero is not allowed.");
+                        } else {
+                            result = num1 / num2;
+                            System.out.println(num1 + " / " + num2 + " = " + result);
+                        }
+                        break;
+    
+                    default:
+                        System.out.println("Error: Invalid operator.");
+                        break;
+                }
+                // Ask the user if they want to continue
+                System.out.print("Do you want to perform another calculation? (yes/no): ");
+                continueCalc = input.next();
+    
+            } while (continueCalc.equalsIgnoreCase("yes"));
+    
+            System.out.println("Calculator exited.");
+            input.close();
+        }
 
 
 
