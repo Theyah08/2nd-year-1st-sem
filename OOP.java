@@ -61,6 +61,7 @@ class OOP {
             System.out.println("quotient is: " + quotient);
     
     }
+    
 
       public static void basicMedium() {
             Scanner scanner = new Scanner(System.in);
@@ -108,6 +109,8 @@ class OOP {
     
             scanner.close();
         }
+
+    
 
       public static void basicHard() {
             Scanner input = new Scanner(System.in);
@@ -168,6 +171,8 @@ class OOP {
             input.close();
         }
 
+
+    
         public static void selectionEasy() {
             Scanner scanner = new Scanner(System.in);
     
@@ -205,6 +210,7 @@ class OOP {
             scanner.close();
     
         }
+
     
 
          public static void selectionMedium() {
@@ -275,6 +281,7 @@ class OOP {
             scanner.close();
     
         }
+
     
 
         public static void selectionHard() {
@@ -318,6 +325,7 @@ class OOP {
             scanner.close();
     
         }
+
     
 
         public static void repetitionEasy() {
@@ -329,6 +337,7 @@ class OOP {
             }
     
         }
+    
     
 
         public static void repetitionMedium() {
@@ -367,6 +376,7 @@ class OOP {
     
         }
 
+    
 
         public static void repetitionHard() {
             Scanner scanner = new Scanner(System.in);
@@ -425,9 +435,169 @@ class OOP {
     
         }
 
+
+
+        public static int square(int num) {
+            return num * num;
     
+        }
+        public static void methodsEasy() {
+            Scanner scanner = new Scanner (System.in);
+    
+            System.out.println("Enter number to square: ");
+            int num = scanner.nextInt();
+    
+            int result = square(num);
+    
+            System.out.println("The square of " + num + " is: " + result);
+            System.out.println(" ");
+    
+            scanner.close();
+        }
 
 
 
+        public static int countVowels(String text) {
+            int count = 0;
+            text = text.toLowerCase();  //  lowercase to simplify checking
+    
+            for (int i = 0; i < text.length(); i++) {
+                char ch = text.charAt(i);
+    
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    count++;
+                }
+            }
+    
+            return count;
+        }
+    
+            public static void methodsMedium() {
+            Scanner scanner = new Scanner(System.in);
+    
+            System.out.print("Enter a string: ");
+            String input = scanner.nextLine();
+    
+            int vowelCount = countVowels(input);
+    
+            System.out.println("Number of vowels: " + vowelCount);
+            System.out.println(" ");
+    
+            scanner.close();
+        }
+
+
+
+        public static boolean isPalindrome(String text) {
+            
+            text = text.toLowerCase().replaceAll("\\s+ ", " ");
+    
+            int left = 0;
+            int right = text.length() - 1;
+    
+            while (left < right) {
+                if (text.charAt(left) != text.charAt(right)) {
+                    return false;  
+                }
+                left++;
+                right--;
+            }
+    
+            return true;  
+        }
+    
+        public static void methodsHard() {
+            Scanner scanner = new Scanner(System.in);
+    
+            System.out.print("Enter a string: ");
+            String input = scanner.nextLine();
+    
+            if (isPalindrome(input)) {
+                System.out.println("\"" + input + "\" is a palindrome.");
+            } else {
+                System.out.println("\"" + input + "\" is NOT a palindrome.");
+            }
+    
+            scanner.close();
+        }
+
+
+    
+        public static void arraysEasy() {
+            int[] arr = {1,2,3,4,5,6,7,8,9,10};
+    
+            System.out.println(""); // for spacing
+    
+            for (int i = arr.length -1; i >= 0; i-- )
+            System.out.print(arr[i] + " ");
+        }
+
+
+
+         public static void arraysMedium() {
+            Scanner scanner = new Scanner(System.in);
+    
+            int[] num = new int[5];  // Array to store 5 numbers
+            int sum = 0;
+    
+            System.out.println("Enter 5 numbers:");
+            for (int i = 0; i < num.length; i++) {
+                System.out.print("Number " + (i + 1) + ": ");
+                num[i] = scanner.nextInt();
+                sum += num[i];  // Add to sum
+            }
+    
+            // Calculate average
+            double average = (double) sum / num.length;
+    
+            // Output results
+            System.out.println("\nSum: " + sum);
+            System.out.println("Average: " + average);
+    
+            scanner.close();
+    
+        }
+
+
+
+        public static void arraysHard() {
+            Scanner scanner = new Scanner(System.in);
+    
+            int[] num = new int[5];
+    
+            System.out.println("Enter 5 number: ");
+            for (int i = 0; i < num.length; i++) {
+                System.out.print("Number " + (i + 1) + ": ");
+                num[i] = scanner.nextInt();
+            }
+    
+            // Initialize min and max with the first element
+            int min = num[0];
+            int max = num[0];
+    
+            // Find min and max without sorting
+            for (int i = 1; i < num.length; i++) {
+                if (num[i] < min) {
+                    min = num[i];
+                }
+                if (num[i] > max) {
+                    max = num[i];
+                }
+            }
+    
+            // Output the results
+            System.out.println("\nSmallest number: " + min);
+            System.out.println("Largest number: " + max);
+    
+            scanner.close();
+        }
+            
+
+
+
+
+
+
+    
   
 }
